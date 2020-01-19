@@ -1,6 +1,6 @@
 Group {
  name GM_Repeater
- tile_color 0xfb600cff
+ tile_color 0xdf7100ff
  addUserKnob {20 User}
  addUserKnob {26 shape l "<b>I N P U T"}
  addUserKnob {41 translate2 l translate T Trans_COPY1_proxy_2.translate2}
