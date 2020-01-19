@@ -1,21 +1,19 @@
-#####Code for GM_Repeater
+#####Code for GM_Repeater#####
 
-Rep = nuke.toNode('GM_Repeater1')
+
+Rep = nuke.toNode('GM_ShapeRepeater')
 
 Rep.begin()
 
-nuke.toNode('PROXY').knob('knobChanged').setValue("""
+nuke.toNode('PROXY_MAIN1').knob('knobChanged').setValue("""
 m = nuke.thisNode()
 kc = nuke.thisKnob()
-
-if kc.name() in ["copies"]:
-
+if kc.name() in ["copy1"]:
     for n in nuke.allNodes():
         if "static" not in n['label'].getValue():
             nuke.delete(n)
-
     
-    iRep = m.knob('copies').getValue()
+    iRep = m.knob('copy1').getValue()
     iRepeats = int(iRep)-1
     bfirstLoop = True
     
@@ -44,9 +42,11 @@ if kc.name() in ["copies"]:
             CTrans.knob('center').setExpression('Trans_COPY1.center')
             CTrans.knob('invert_matrix').setExpression('Trans_COPY1.invert_matrix')
             CTrans.knob('filter').setExpression('Trans_COPY1.filter')
+            CTrans.knob('motionblur').setExpression('Trans_COPY1.motionblur')
+            CTrans.knob('shutter').setExpression('Trans_COPY1.shutter')
+            CTrans.knob('shutteroffset').setValue(0)
             nMerge = nuke.nodes.Merge2(name = "m" + str(i))
             nMerge.knob('also_merge').setValue('all')
-            nMerge.knob('operation').setExpression('Merge_Proxy.operation1')
             nMerge.setInput(1, CTrans)
             
             if bfirstLoop:
@@ -67,7 +67,6 @@ if kc.name() in ["copies"]:
         b.setInput(0, p)
     else:
         b.setInput(0, nDot)
-
 """)
 
 
