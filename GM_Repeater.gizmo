@@ -1,7 +1,6 @@
 Group {
  name GM_Repeater
- xpos 2677
- ypos -456
+ tile_color 0xfb600cff
  addUserKnob {20 User}
  addUserKnob {26 shape l "<b>I N P U T"}
  addUserKnob {41 translate2 l translate T Trans_COPY1_proxy_2.translate2}
@@ -43,7 +42,7 @@ Group {
   name BackdropNode1
   tile_color 0xff
   label "<center><font color=red>DON`T TOUCH\nstatic"
-  note_font "Verdana Bold Bold Bold Bold Bold"
+  note_font "Verdana Bold Bold Bold Bold Bold Bold Bold"
   note_font_size 42
   xpos 738
   ypos 63
@@ -73,8 +72,8 @@ Group {
   xpos 510
   ypos 464
  }
-set Nef6fbc00 [stack 0]
-push $Nef6fbc00
+set Nd993b880 [stack 0]
+push $Nd993b880
  Transform {
   translate {{Trans_COPY1_proxy.translate1} {Trans_COPY1_proxy.translate1}}
   rotate {{Trans_COPY1_proxy.rotate1}}
@@ -102,7 +101,7 @@ push $Nef6fbc00
  Dot {
   name Dot1
  }
-set Nf183a380 [stack 0]
+set Ne6494380 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -115,7 +114,7 @@ set Nf183a380 [stack 0]
   filter {{Trans_COPY1.filter}}
   name t0
  }
-set Nf183a000 [stack 0]
+set Ne6494000 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -128,7 +127,7 @@ set Nf183a000 [stack 0]
   filter {{Trans_COPY1.filter}}
   name t1
  }
-set Nf06a5880 [stack 0]
+set Ne64e3880 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -141,7 +140,7 @@ set Nf06a5880 [stack 0]
   filter {{Trans_COPY1.filter}}
   name t2
  }
-set Nf06a5180 [stack 0]
+set Ne64e3180 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -154,7 +153,7 @@ set Nf06a5180 [stack 0]
   filter {{Trans_COPY1.filter}}
   name t3
  }
-set Nf06a4a80 [stack 0]
+set Ne64e2a80 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -167,7 +166,7 @@ set Nf06a4a80 [stack 0]
   filter {{Trans_COPY1.filter}}
   name t4
  }
-set Nf06a4380 [stack 0]
+set Ne64e2380 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -180,7 +179,7 @@ set Nf06a4380 [stack 0]
   filter {{Trans_COPY1.filter}}
   name t5
  }
-set N8e171c00 [stack 0]
+set Ne6521c00 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -193,7 +192,7 @@ set N8e171c00 [stack 0]
   filter {{Trans_COPY1.filter}}
   name t6
  }
-set N8e171500 [stack 0]
+set Ne6521500 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -206,7 +205,7 @@ set N8e171500 [stack 0]
   filter {{Trans_COPY1.filter}}
   name t7
  }
-set N8e170e00 [stack 0]
+set Ne6520e00 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -219,7 +218,7 @@ set N8e170e00 [stack 0]
   filter {{Trans_COPY1.filter}}
   name t8
  }
-set N8e170700 [stack 0]
+set Ne6520700 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -232,7 +231,7 @@ set N8e170700 [stack 0]
   filter {{Trans_COPY1.filter}}
   name t9
  }
-set N8e170000 [stack 0]
+set Ne6520000 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -245,7 +244,7 @@ set N8e170000 [stack 0]
   filter {{Trans_COPY1.filter}}
   name t10
  }
-set Nebd7b880 [stack 0]
+set Ne655d880 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -258,7 +257,7 @@ set Nebd7b880 [stack 0]
   filter {{Trans_COPY1.filter}}
   name t11
  }
-set Nebd7b180 [stack 0]
+set Ne655d180 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -271,7 +270,7 @@ set Nebd7b180 [stack 0]
   filter {{Trans_COPY1.filter}}
   name t12
  }
-set Nebd7aa80 [stack 0]
+set Ne655ca80 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -284,7 +283,7 @@ set Nebd7aa80 [stack 0]
   filter {{Trans_COPY1.filter}}
   name t13
  }
-set Nebd7a380 [stack 0]
+set Ne655c380 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -297,7 +296,7 @@ set Nebd7a380 [stack 0]
   filter {{Trans_COPY1.filter}}
   name t14
  }
-set Ne5e89c00 [stack 0]
+set Ne65a1c00 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -310,7 +309,7 @@ set Ne5e89c00 [stack 0]
   filter {{Trans_COPY1.filter}}
   name t15
  }
-set Ne5e89500 [stack 0]
+set Ne65a1500 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -323,7 +322,7 @@ set Ne5e89500 [stack 0]
   filter {{Trans_COPY1.filter}}
   name t16
  }
-set Ne5e88e00 [stack 0]
+set Ne65a0e00 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -336,7 +335,7 @@ set Ne5e88e00 [stack 0]
   filter {{Trans_COPY1.filter}}
   name t17
  }
-set Ne5e88700 [stack 0]
+set Ne65a0700 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -349,7 +348,7 @@ set Ne5e88700 [stack 0]
   filter {{Trans_COPY1.filter}}
   name t18
  }
-set Ne5e88000 [stack 0]
+set Ne65a0000 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -362,7 +361,7 @@ set Ne5e88000 [stack 0]
   filter {{Trans_COPY1.filter}}
   name t19
  }
-set N51865880 [stack 0]
+set Ne0969880 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -375,7 +374,7 @@ set N51865880 [stack 0]
   filter {{Trans_COPY1.filter}}
   name t20
  }
-set N51865180 [stack 0]
+set Ne0969180 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -388,7 +387,7 @@ set N51865180 [stack 0]
   filter {{Trans_COPY1.filter}}
   name t21
  }
-set N51864a80 [stack 0]
+set Ne0968a80 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -401,7 +400,7 @@ set N51864a80 [stack 0]
   filter {{Trans_COPY1.filter}}
   name t22
  }
-set N51864380 [stack 0]
+set Ne0968380 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -414,310 +413,30 @@ set N51864380 [stack 0]
   filter {{Trans_COPY1.filter}}
   name t23
  }
-set N8fa97c00 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t24
- }
-set N8fa97500 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t25
- }
-set N8fa96e00 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t26
- }
-set N8fa96700 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t27
- }
-set N8fa96000 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t28
- }
-set Neae7d880 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t29
- }
-set Neae7d180 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t30
- }
-set Neae7ca80 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t31
- }
-set Neae7c380 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t32
- }
-set Nb2625c00 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t33
- }
-set Nb2625500 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t34
- }
-set Nb2624e00 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t35
- }
-set Nb2624700 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t36
- }
-set Nb2624000 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t37
- }
-set Nf37d7880 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t38
- }
-set Nf37d7180 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t39
- }
-set Nf37d6a80 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t40
- }
-set Nf37d6380 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t41
- }
-set N509ffc00 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t42
- }
-set N509ff500 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t43
- }
-push $N509ff500
-push $N509ffc00
-push $Nf37d6380
-push $Nf37d6a80
-push $Nf37d7180
-push $Nf37d7880
-push $Nb2624000
-push $Nb2624700
-push $Nb2624e00
-push $Nb2625500
-push $Nb2625c00
-push $Neae7c380
-push $Neae7ca80
-push $Neae7d180
-push $Neae7d880
-push $N8fa96000
-push $N8fa96700
-push $N8fa96e00
-push $N8fa97500
-push $N8fa97c00
-push $N51864380
-push $N51864a80
-push $N51865180
-push $N51865880
-push $Ne5e88000
-push $Ne5e88700
-push $Ne5e88e00
-push $Ne5e89500
-push $Ne5e89c00
-push $Nebd7a380
-push $Nebd7aa80
-push $Nebd7b180
-push $Nebd7b880
-push $N8e170000
-push $N8e170700
-push $N8e170e00
-push $N8e171500
-push $N8e171c00
-push $Nf06a4380
-push $Nf06a4a80
-push $Nf06a5180
-push $Nf06a5880
-push $Nf183a000
-push $Nf183a380
+push $Ne0968380
+push $Ne0968a80
+push $Ne0969180
+push $Ne0969880
+push $Ne65a0000
+push $Ne65a0700
+push $Ne65a0e00
+push $Ne65a1500
+push $Ne65a1c00
+push $Ne655c380
+push $Ne655ca80
+push $Ne655d180
+push $Ne655d880
+push $Ne6520000
+push $Ne6520700
+push $Ne6520e00
+push $Ne6521500
+push $Ne6521c00
+push $Ne64e2380
+push $Ne64e2a80
+push $Ne64e3180
+push $Ne64e3880
+push $Ne6494000
+push $Ne6494380
  Merge2 {
   inputs 2
   operation {{Merge_Proxy.operation1}}
@@ -862,126 +581,6 @@ push $Nf183a380
   also_merge all
   name m23
  }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m24
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m25
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m26
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m27
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m28
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m29
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m30
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m31
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m32
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m33
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m34
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m35
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m36
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m37
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m38
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m39
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m40
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m41
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m42
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m43
- }
  NoOp {
   name COPIES1_end
   label static
@@ -1018,7 +617,7 @@ push $Nf183a380
   ypos 272
   addUserKnob {20 User}
   addUserKnob {3 copies l Copies}
-  copies 45
+  copies 25
  }
  NoOp {
   inputs 0
