@@ -107,7 +107,7 @@ push $N863be80
   xpos 544
   ypos 668
  }
-set N730cd3c0 [stack 0]
+set N7ad837e0 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -125,7 +125,7 @@ set N730cd3c0 [stack 0]
   xpos 510
   ypos 686
  }
-set N730a5f40 [stack 0]
+set N762a3b40 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -143,7 +143,7 @@ set N730a5f40 [stack 0]
   xpos 510
   ypos 710
  }
-set N730f1530 [stack 0]
+set N762a8480 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -161,7 +161,7 @@ set N730f1530 [stack 0]
   xpos 510
   ypos 734
  }
-set N730a1730 [stack 0]
+set Na24eefc0 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -179,7 +179,7 @@ set N730a1730 [stack 0]
   xpos 510
   ypos 758
  }
-set N650aa180 [stack 0]
+set Naa8f24d0 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -197,7 +197,7 @@ set N650aa180 [stack 0]
   xpos 510
   ypos 782
  }
-set N650cb3d0 [stack 0]
+set Na24d86d0 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -215,7 +215,7 @@ set N650cb3d0 [stack 0]
   xpos 510
   ypos 806
  }
-set N650ecdc0 [stack 0]
+set N6b3fa710 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -233,7 +233,7 @@ set N650ecdc0 [stack 0]
   xpos 510
   ypos 830
  }
-set N9618e040 [stack 0]
+set N6ef9bc10 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -251,7 +251,7 @@ set N9618e040 [stack 0]
   xpos 510
   ypos 854
  }
-set N961af290 [stack 0]
+set N6efbd0b0 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -269,17 +269,208 @@ set N961af290 [stack 0]
   xpos 510
   ypos 878
  }
-push $N961af290
-push $N9618e040
-push $N650ecdc0
-push $N650cb3d0
-push $N650aa180
-push $N730a1730
-push $N730f1530
-push $N730a5f40
-push $N730cd3c0
+set N6b3d8850 [stack 0]
+ Transform {
+  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
+  rotate {{Trans_COPY1.rotate}}
+  scale {{Trans_COPY1.scale}}
+  skewX {{Trans_COPY1.skewX}}
+  skewY {{Trans_COPY1.skewY}}
+  skew_order {{Trans_COPY1.skew_order}}
+  center {{Trans_COPY1.center} {Trans_COPY1.center}}
+  invert_matrix {{Trans_COPY1.invert_matrix}}
+  filter {{Trans_COPY1.filter}}
+  motionblur {{Trans_COPY1.motionblur}}
+  shutter {{Trans_COPY1.shutter}}
+  shutteroffset centred
+  name t9
+  xpos 510
+  ypos 902
+ }
+set N72380980 [stack 0]
+ Transform {
+  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
+  rotate {{Trans_COPY1.rotate}}
+  scale {{Trans_COPY1.scale}}
+  skewX {{Trans_COPY1.skewX}}
+  skewY {{Trans_COPY1.skewY}}
+  skew_order {{Trans_COPY1.skew_order}}
+  center {{Trans_COPY1.center} {Trans_COPY1.center}}
+  invert_matrix {{Trans_COPY1.invert_matrix}}
+  filter {{Trans_COPY1.filter}}
+  motionblur {{Trans_COPY1.motionblur}}
+  shutter {{Trans_COPY1.shutter}}
+  shutteroffset centred
+  name t10
+  xpos 510
+  ypos 926
+ }
+set N723a1e00 [stack 0]
+ Transform {
+  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
+  rotate {{Trans_COPY1.rotate}}
+  scale {{Trans_COPY1.scale}}
+  skewX {{Trans_COPY1.skewX}}
+  skewY {{Trans_COPY1.skewY}}
+  skew_order {{Trans_COPY1.skew_order}}
+  center {{Trans_COPY1.center} {Trans_COPY1.center}}
+  invert_matrix {{Trans_COPY1.invert_matrix}}
+  filter {{Trans_COPY1.filter}}
+  motionblur {{Trans_COPY1.motionblur}}
+  shutter {{Trans_COPY1.shutter}}
+  shutteroffset centred
+  name t11
+  xpos 510
+  ypos 950
+ }
+set N723c32a0 [stack 0]
+ Transform {
+  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
+  rotate {{Trans_COPY1.rotate}}
+  scale {{Trans_COPY1.scale}}
+  skewX {{Trans_COPY1.skewX}}
+  skewY {{Trans_COPY1.skewY}}
+  skew_order {{Trans_COPY1.skew_order}}
+  center {{Trans_COPY1.center} {Trans_COPY1.center}}
+  invert_matrix {{Trans_COPY1.invert_matrix}}
+  filter {{Trans_COPY1.filter}}
+  motionblur {{Trans_COPY1.motionblur}}
+  shutter {{Trans_COPY1.shutter}}
+  shutteroffset centred
+  name t12
+  xpos 510
+  ypos 974
+ }
+set N723e4740 [stack 0]
+ Transform {
+  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
+  rotate {{Trans_COPY1.rotate}}
+  scale {{Trans_COPY1.scale}}
+  skewX {{Trans_COPY1.skewX}}
+  skewY {{Trans_COPY1.skewY}}
+  skew_order {{Trans_COPY1.skew_order}}
+  center {{Trans_COPY1.center} {Trans_COPY1.center}}
+  invert_matrix {{Trans_COPY1.invert_matrix}}
+  filter {{Trans_COPY1.filter}}
+  motionblur {{Trans_COPY1.motionblur}}
+  shutter {{Trans_COPY1.shutter}}
+  shutteroffset centred
+  name t13
+  xpos 510
+  ypos 998
+ }
+set N75b85bc0 [stack 0]
+ Transform {
+  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
+  rotate {{Trans_COPY1.rotate}}
+  scale {{Trans_COPY1.scale}}
+  skewX {{Trans_COPY1.skewX}}
+  skewY {{Trans_COPY1.skewY}}
+  skew_order {{Trans_COPY1.skew_order}}
+  center {{Trans_COPY1.center} {Trans_COPY1.center}}
+  invert_matrix {{Trans_COPY1.invert_matrix}}
+  filter {{Trans_COPY1.filter}}
+  motionblur {{Trans_COPY1.motionblur}}
+  shutter {{Trans_COPY1.shutter}}
+  shutteroffset centred
+  name t14
+  xpos 510
+  ypos 1022
+ }
+set N75ba7060 [stack 0]
+ Transform {
+  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
+  rotate {{Trans_COPY1.rotate}}
+  scale {{Trans_COPY1.scale}}
+  skewX {{Trans_COPY1.skewX}}
+  skewY {{Trans_COPY1.skewY}}
+  skew_order {{Trans_COPY1.skew_order}}
+  center {{Trans_COPY1.center} {Trans_COPY1.center}}
+  invert_matrix {{Trans_COPY1.invert_matrix}}
+  filter {{Trans_COPY1.filter}}
+  motionblur {{Trans_COPY1.motionblur}}
+  shutter {{Trans_COPY1.shutter}}
+  shutteroffset centred
+  name t15
+  xpos 510
+  ypos 1046
+ }
+set N75bc88f0 [stack 0]
+ Transform {
+  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
+  rotate {{Trans_COPY1.rotate}}
+  scale {{Trans_COPY1.scale}}
+  skewX {{Trans_COPY1.skewX}}
+  skewY {{Trans_COPY1.skewY}}
+  skew_order {{Trans_COPY1.skew_order}}
+  center {{Trans_COPY1.center} {Trans_COPY1.center}}
+  invert_matrix {{Trans_COPY1.invert_matrix}}
+  filter {{Trans_COPY1.filter}}
+  motionblur {{Trans_COPY1.motionblur}}
+  shutter {{Trans_COPY1.shutter}}
+  shutteroffset centred
+  name t16
+  xpos 510
+  ypos 1070
+ }
+set N6efde260 [stack 0]
+ Transform {
+  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
+  rotate {{Trans_COPY1.rotate}}
+  scale {{Trans_COPY1.scale}}
+  skewX {{Trans_COPY1.skewX}}
+  skewY {{Trans_COPY1.skewY}}
+  skew_order {{Trans_COPY1.skew_order}}
+  center {{Trans_COPY1.center} {Trans_COPY1.center}}
+  invert_matrix {{Trans_COPY1.invert_matrix}}
+  filter {{Trans_COPY1.filter}}
+  motionblur {{Trans_COPY1.motionblur}}
+  shutter {{Trans_COPY1.shutter}}
+  shutteroffset centred
+  name t17
+  xpos 510
+  ypos 1094
+ }
+set N7938d0b0 [stack 0]
+ Transform {
+  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
+  rotate {{Trans_COPY1.rotate}}
+  scale {{Trans_COPY1.scale}}
+  skewX {{Trans_COPY1.skewX}}
+  skewY {{Trans_COPY1.skewY}}
+  skew_order {{Trans_COPY1.skew_order}}
+  center {{Trans_COPY1.center} {Trans_COPY1.center}}
+  invert_matrix {{Trans_COPY1.invert_matrix}}
+  filter {{Trans_COPY1.filter}}
+  motionblur {{Trans_COPY1.motionblur}}
+  shutter {{Trans_COPY1.shutter}}
+  shutteroffset centred
+  name t18
+  xpos 510
+  ypos 1118
+ }
+push $N7938d0b0
+push $N6efde260
+push $N75bc88f0
+push $N75ba7060
+push $N75b85bc0
+push $N723e4740
+push $N723c32a0
+push $N723a1e00
+push $N72380980
+push $N6b3d8850
+push $N6efbd0b0
+push $N6ef9bc10
+push $N6b3fa710
+push $Na24d86d0
+push $Naa8f24d0
+push $Na24eefc0
+push $N762a8480
+push $N762a3b40
+push $N7ad837e0
  Merge2 {
   inputs 2
+  operation {{Merge_Proxy.operation1}}
   also_merge all
   name m0
   xpos 620
@@ -287,6 +478,7 @@ push $N730cd3c0
  }
  Merge2 {
   inputs 2
+  operation {{Merge_Proxy.operation1}}
   also_merge all
   name m1
   xpos 620
@@ -294,6 +486,7 @@ push $N730cd3c0
  }
  Merge2 {
   inputs 2
+  operation {{Merge_Proxy.operation1}}
   also_merge all
   name m2
   xpos 620
@@ -301,6 +494,7 @@ push $N730cd3c0
  }
  Merge2 {
   inputs 2
+  operation {{Merge_Proxy.operation1}}
   also_merge all
   name m3
   xpos 620
@@ -308,6 +502,7 @@ push $N730cd3c0
  }
  Merge2 {
   inputs 2
+  operation {{Merge_Proxy.operation1}}
   also_merge all
   name m4
   xpos 620
@@ -315,6 +510,7 @@ push $N730cd3c0
  }
  Merge2 {
   inputs 2
+  operation {{Merge_Proxy.operation1}}
   also_merge all
   name m5
   xpos 620
@@ -322,6 +518,7 @@ push $N730cd3c0
  }
  Merge2 {
   inputs 2
+  operation {{Merge_Proxy.operation1}}
   also_merge all
   name m6
   xpos 620
@@ -329,6 +526,7 @@ push $N730cd3c0
  }
  Merge2 {
   inputs 2
+  operation {{Merge_Proxy.operation1}}
   also_merge all
   name m7
   xpos 620
@@ -336,10 +534,91 @@ push $N730cd3c0
  }
  Merge2 {
   inputs 2
+  operation {{Merge_Proxy.operation1}}
   also_merge all
   name m8
   xpos 620
   ypos 878
+ }
+ Merge2 {
+  inputs 2
+  operation {{Merge_Proxy.operation1}}
+  also_merge all
+  name m9
+  xpos 620
+  ypos 902
+ }
+ Merge2 {
+  inputs 2
+  operation {{Merge_Proxy.operation1}}
+  also_merge all
+  name m10
+  xpos 620
+  ypos 926
+ }
+ Merge2 {
+  inputs 2
+  operation {{Merge_Proxy.operation1}}
+  also_merge all
+  name m11
+  xpos 620
+  ypos 950
+ }
+ Merge2 {
+  inputs 2
+  operation {{Merge_Proxy.operation1}}
+  also_merge all
+  name m12
+  xpos 620
+  ypos 974
+ }
+ Merge2 {
+  inputs 2
+  operation {{Merge_Proxy.operation1}}
+  also_merge all
+  name m13
+  xpos 620
+  ypos 998
+ }
+ Merge2 {
+  inputs 2
+  operation {{Merge_Proxy.operation1}}
+  also_merge all
+  name m14
+  xpos 620
+  ypos 1022
+ }
+ Merge2 {
+  inputs 2
+  operation {{Merge_Proxy.operation1}}
+  also_merge all
+  name m15
+  xpos 620
+  ypos 1046
+ }
+ Merge2 {
+  inputs 2
+  operation {{Merge_Proxy.operation1}}
+  also_merge all
+  name m16
+  xpos 620
+  ypos 1070
+ }
+ Merge2 {
+  inputs 2
+  operation {{Merge_Proxy.operation1}}
+  also_merge all
+  name m17
+  xpos 620
+  ypos 1094
+ }
+ Merge2 {
+  inputs 2
+  operation {{Merge_Proxy.operation1}}
+  also_merge all
+  name m18
+  xpos 620
+  ypos 1118
  }
  NoOp {
   name COPIES1_end
@@ -370,16 +649,6 @@ push $N730cd3c0
  }
  NoOp {
   inputs 0
-  name Merge_Proxy
-  label static
-  xpos 620
-  ypos 464
-  addUserKnob {20 User}
-  addUserKnob {4 operation1 M {atop average color-burn color-dodge conjoint-over copy difference disjoint-over divide exclusion from geometric hard-light hypot in mask matte max min minus multiply out over overlay plus screen soft-light stencil under xor}}
-  operation1 over
- }
- NoOp {
-  inputs 0
   name Trans_COPY1_proxy_2
   label static
   xpos 290
@@ -401,13 +670,13 @@ push $N730cd3c0
  NoOp {
   inputs 0
   name PROXY
-  knobChanged "\nm = nuke.thisNode()\nkc = nuke.thisKnob()\nif kc.name() in \[\"copies\"]:\n    for n in nuke.allNodes():\n        if \"static\" not in n\['label'].getValue():\n            nuke.delete(n)\n    \n    iRep = m.knob('copies').getValue()\n    iRepeats = int(iRep)-1\n    bfirstLoop = True\n    \n    # Main Transform for Copy1\n    w = nuke.toNode('Trans_COPY1')\n    \n    # Last Merge connected to this\n    b = nuke.toNode('COPIES1_end')\n    \n    # Dot would be connected to this and allows toggle between original and modified source \n    s = nuke.toNode('Switch1')\n    \n    nDot = nuke.nodes.Dot()\n    nDot.setInput(0, s)\n    \n    if (iRepeats+1) >= 2: \n    \n        for i in range(iRepeats):\n            CTrans = nuke.nodes.Transform(name = \"t\" + str(i))\n            CTrans.knob('translate').setExpression('Trans_COPY1.translate')\n            CTrans.knob('rotate').setExpression('Trans_COPY1.rotate')\n            CTrans.knob('scale').setExpression('Trans_COPY1.scale')\n            CTrans.knob('skewX').setExpression('Trans_COPY1.skewX')\n            CTrans.knob('skewY').setExpression('Trans_COPY1.skewY')\n            CTrans.knob('skew_order').setExpression('Trans_COPY1.skew_order')\n            CTrans.knob('center').setExpression('Trans_COPY1.center')\n            CTrans.knob('invert_matrix').setExpression('Trans_COPY1.invert_matrix')\n            CTrans.knob('filter').setExpression('Trans_COPY1.filter')\n            CTrans.knob('motionblur').setExpression('Trans_COPY1.motionblur')\n            CTrans.knob('shutter').setExpression('Trans_COPY1.shutter')\n            CTrans.knob('shutteroffset').setValue(0)\n            nMerge = nuke.nodes.Merge2(name = \"m\" + str(i))\n            nMerge.knob('also_merge').setValue('all')\n            nMerge.setInput(1, CTrans)\n            \n            if bfirstLoop:\n                bfirstLoop = False\n                CTrans.setInput(0, nDot)\n                nMerge.setInput(0, nDot)\n            else:\n                CTrans.setInput(0, nPrevTrans)\n                nMerge.setInput(0, nPrevMerge)\n        \n            nPrevMerge = nMerge\n            nPrevTrans = CTrans\n        \n        MNum = int(iRepeats) - 1\n        \n        p = nuke.toNode(\"m\" + str(MNum))\n        \n        b.setInput(0, p)\n    else:\n        b.setInput(0, nDot)\n"
+  knobChanged "\nm = nuke.thisNode()\nkc = nuke.thisKnob()\nif kc.name() in \[\"copies\"]:\n    for n in nuke.allNodes():\n        if \"static\" not in n\['label'].getValue():\n            nuke.delete(n)\n    \n    iRep = m.knob('copies').getValue()\n    iRepeats = int(iRep)-1\n    bfirstLoop = True\n    \n    # Main Transform for Copy1\n    w = nuke.toNode('Trans_COPY1')\n    \n    # Last Merge connected to this\n    b = nuke.toNode('COPIES1_end')\n    \n    # Dot would be connected to this and allows toggle between original and modified source \n    s = nuke.toNode('Switch1')\n    \n    nDot = nuke.nodes.Dot()\n    nDot.setInput(0, s)\n    \n    if (iRepeats+1) >= 2: \n    \n        for i in range(iRepeats):\n            CTrans = nuke.nodes.Transform(name = \"t\" + str(i))\n            CTrans.knob('translate').setExpression('Trans_COPY1.translate')\n            CTrans.knob('rotate').setExpression('Trans_COPY1.rotate')\n            CTrans.knob('scale').setExpression('Trans_COPY1.scale')\n            CTrans.knob('skewX').setExpression('Trans_COPY1.skewX')\n            CTrans.knob('skewY').setExpression('Trans_COPY1.skewY')\n            CTrans.knob('skew_order').setExpression('Trans_COPY1.skew_order')\n            CTrans.knob('center').setExpression('Trans_COPY1.center')\n            CTrans.knob('invert_matrix').setExpression('Trans_COPY1.invert_matrix')\n            CTrans.knob('filter').setExpression('Trans_COPY1.filter')\n            CTrans.knob('motionblur').setExpression('Trans_COPY1.motionblur')\n            CTrans.knob('shutter').setExpression('Trans_COPY1.shutter')\n            CTrans.knob('shutteroffset').setValue(0)\n            nMerge = nuke.nodes.Merge2(name = \"m\" + str(i))\n            nMerge.knob('also_merge').setValue('all')\n            nMerge.knob('operation').setExpression('Merge_Proxy.operation1')\n            nMerge.setInput(1, CTrans)\n            \n            if bfirstLoop:\n                bfirstLoop = False\n                CTrans.setInput(0, nDot)\n                nMerge.setInput(0, nDot)\n            else:\n                CTrans.setInput(0, nPrevTrans)\n                nMerge.setInput(0, nPrevMerge)\n        \n            nPrevMerge = nMerge\n            nPrevTrans = CTrans\n        \n        MNum = int(iRepeats) - 1\n        \n        p = nuke.toNode(\"m\" + str(MNum))\n        \n        b.setInput(0, p)\n    else:\n        b.setInput(0, nDot)\n"
   label static
   xpos 840
   ypos 272
   addUserKnob {20 User}
   addUserKnob {3 copies l Copies}
-  copies 10
+  copies 20
  }
  NoOp {
   inputs 0
@@ -433,5 +702,16 @@ push $N730cd3c0
   motionblur1 1
   addUserKnob {7 shutter1 R 0 2}
   shutter1 0.5
+ }
+ NoOp {
+  inputs 0
+  name Merge_Proxy
+  label static
+  selected true
+  xpos 620
+  ypos 465
+  addUserKnob {20 User}
+  addUserKnob {4 operation1 M {atop average color-burn color-dodge conjoint-over copy difference disjoint-over divide exclusion from geometric hard-light hypot in mask matte max min minus multiply out over overlay plus screen soft-light stencil under xor ""}}
+  operation1 xor
  }
 end_group
