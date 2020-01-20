@@ -28,6 +28,8 @@ Group {
  addUserKnob {22 set_center_center l "Set Center" -STARTLINE T "this_width = nuke.thisGroup().width()\n\nthis_height = nuke.thisGroup().height()\n\nnewWidth = this_width/2\nnewHeight = this_height/2\n\nnuke.thisGroup().knob(\"center1\").setValue(\[newWidth, newHeight])"}
  addUserKnob {41 invert1 l invert T Trans_COPY1_proxy.invert1}
  addUserKnob {41 filter1 l filter T Trans_COPY1_proxy.filter1}
+ addUserKnob {41 motionblur1 l motionblur T Trans_COPY1_proxy.motionblur1}
+ addUserKnob {41 shutter1 l shutter T Trans_COPY1_proxy.shutter1}
  addUserKnob {26 ""}
  addUserKnob {6 clamp l Clamp +STARTLINE}
  clamp true
@@ -42,7 +44,7 @@ Group {
   name BackdropNode1
   tile_color 0xff
   label "<center><font color=red>DON`T TOUCH\nstatic"
-  note_font "Verdana Bold Bold Bold Bold Bold Bold Bold"
+  note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold Bold"
   note_font_size 42
   xpos 738
   ypos 63
@@ -70,10 +72,10 @@ Group {
   name Trans_COPY2
   label static
   xpos 510
-  ypos 464
+  ypos 465
  }
-set Nd993b880 [stack 0]
-push $Nd993b880
+set N863be80 [stack 0]
+push $N863be80
  Transform {
   translate {{Trans_COPY1_proxy.translate1} {Trans_COPY1_proxy.translate1}}
   rotate {{Trans_COPY1_proxy.rotate1}}
@@ -81,9 +83,11 @@ push $Nd993b880
   skewX {{Trans_COPY1_proxy.skewX1}}
   skewY {{Trans_COPY1_proxy.skewY1}}
   skew_order {{Trans_COPY1_proxy.skeworder1}}
-  center {{"Flare.position - translate.x + Trans_COPY1_proxy.center1.x"} {"Flare.position- translate.y +  + Trans_COPY1_proxy.center1.y"}}
+  center {{Trans_COPY1_proxy.center1.x} {Trans_COPY1_proxy.center1.y}}
   invert_matrix {{Trans_COPY1_proxy.invert1}}
   filter {{Trans_COPY1_proxy.filter1}}
+  motionblur {{Trans_COPY1_proxy.motionblur1}}
+  shutter {{Trans_COPY1_proxy.shutter1}}
   shutteroffset centred
   name Trans_COPY1
   label static
@@ -100,8 +104,10 @@ push $Nd993b880
  }
  Dot {
   name Dot1
+  xpos 544
+  ypos 668
  }
-set Ne6494380 [stack 0]
+set N730cd3c0 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -112,9 +118,14 @@ set Ne6494380 [stack 0]
   center {{Trans_COPY1.center} {Trans_COPY1.center}}
   invert_matrix {{Trans_COPY1.invert_matrix}}
   filter {{Trans_COPY1.filter}}
+  motionblur {{Trans_COPY1.motionblur}}
+  shutter {{Trans_COPY1.shutter}}
+  shutteroffset centred
   name t0
+  xpos 510
+  ypos 686
  }
-set Ne6494000 [stack 0]
+set N730a5f40 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -125,9 +136,14 @@ set Ne6494000 [stack 0]
   center {{Trans_COPY1.center} {Trans_COPY1.center}}
   invert_matrix {{Trans_COPY1.invert_matrix}}
   filter {{Trans_COPY1.filter}}
+  motionblur {{Trans_COPY1.motionblur}}
+  shutter {{Trans_COPY1.shutter}}
+  shutteroffset centred
   name t1
+  xpos 510
+  ypos 710
  }
-set Ne64e3880 [stack 0]
+set N730f1530 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -138,9 +154,14 @@ set Ne64e3880 [stack 0]
   center {{Trans_COPY1.center} {Trans_COPY1.center}}
   invert_matrix {{Trans_COPY1.invert_matrix}}
   filter {{Trans_COPY1.filter}}
+  motionblur {{Trans_COPY1.motionblur}}
+  shutter {{Trans_COPY1.shutter}}
+  shutteroffset centred
   name t2
+  xpos 510
+  ypos 734
  }
-set Ne64e3180 [stack 0]
+set N730a1730 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -151,9 +172,14 @@ set Ne64e3180 [stack 0]
   center {{Trans_COPY1.center} {Trans_COPY1.center}}
   invert_matrix {{Trans_COPY1.invert_matrix}}
   filter {{Trans_COPY1.filter}}
+  motionblur {{Trans_COPY1.motionblur}}
+  shutter {{Trans_COPY1.shutter}}
+  shutteroffset centred
   name t3
+  xpos 510
+  ypos 758
  }
-set Ne64e2a80 [stack 0]
+set N650aa180 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -164,9 +190,14 @@ set Ne64e2a80 [stack 0]
   center {{Trans_COPY1.center} {Trans_COPY1.center}}
   invert_matrix {{Trans_COPY1.invert_matrix}}
   filter {{Trans_COPY1.filter}}
+  motionblur {{Trans_COPY1.motionblur}}
+  shutter {{Trans_COPY1.shutter}}
+  shutteroffset centred
   name t4
+  xpos 510
+  ypos 782
  }
-set Ne64e2380 [stack 0]
+set N650cb3d0 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -177,9 +208,14 @@ set Ne64e2380 [stack 0]
   center {{Trans_COPY1.center} {Trans_COPY1.center}}
   invert_matrix {{Trans_COPY1.invert_matrix}}
   filter {{Trans_COPY1.filter}}
+  motionblur {{Trans_COPY1.motionblur}}
+  shutter {{Trans_COPY1.shutter}}
+  shutteroffset centred
   name t5
+  xpos 510
+  ypos 806
  }
-set Ne6521c00 [stack 0]
+set N650ecdc0 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -190,9 +226,14 @@ set Ne6521c00 [stack 0]
   center {{Trans_COPY1.center} {Trans_COPY1.center}}
   invert_matrix {{Trans_COPY1.invert_matrix}}
   filter {{Trans_COPY1.filter}}
+  motionblur {{Trans_COPY1.motionblur}}
+  shutter {{Trans_COPY1.shutter}}
+  shutteroffset centred
   name t6
+  xpos 510
+  ypos 830
  }
-set Ne6521500 [stack 0]
+set N9618e040 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -203,9 +244,14 @@ set Ne6521500 [stack 0]
   center {{Trans_COPY1.center} {Trans_COPY1.center}}
   invert_matrix {{Trans_COPY1.invert_matrix}}
   filter {{Trans_COPY1.filter}}
+  motionblur {{Trans_COPY1.motionblur}}
+  shutter {{Trans_COPY1.shutter}}
+  shutteroffset centred
   name t7
+  xpos 510
+  ypos 854
  }
-set Ne6520e00 [stack 0]
+set N961af290 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -216,370 +262,84 @@ set Ne6520e00 [stack 0]
   center {{Trans_COPY1.center} {Trans_COPY1.center}}
   invert_matrix {{Trans_COPY1.invert_matrix}}
   filter {{Trans_COPY1.filter}}
+  motionblur {{Trans_COPY1.motionblur}}
+  shutter {{Trans_COPY1.shutter}}
+  shutteroffset centred
   name t8
+  xpos 510
+  ypos 878
  }
-set Ne6520700 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t9
- }
-set Ne6520000 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t10
- }
-set Ne655d880 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t11
- }
-set Ne655d180 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t12
- }
-set Ne655ca80 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t13
- }
-set Ne655c380 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t14
- }
-set Ne65a1c00 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t15
- }
-set Ne65a1500 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t16
- }
-set Ne65a0e00 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t17
- }
-set Ne65a0700 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t18
- }
-set Ne65a0000 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t19
- }
-set Ne0969880 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t20
- }
-set Ne0969180 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t21
- }
-set Ne0968a80 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t22
- }
-set Ne0968380 [stack 0]
- Transform {
-  translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
-  rotate {{Trans_COPY1.rotate}}
-  scale {{Trans_COPY1.scale}}
-  skewX {{Trans_COPY1.skewX}}
-  skewY {{Trans_COPY1.skewY}}
-  skew_order {{Trans_COPY1.skew_order}}
-  center {{Trans_COPY1.center} {Trans_COPY1.center}}
-  invert_matrix {{Trans_COPY1.invert_matrix}}
-  filter {{Trans_COPY1.filter}}
-  name t23
- }
-push $Ne0968380
-push $Ne0968a80
-push $Ne0969180
-push $Ne0969880
-push $Ne65a0000
-push $Ne65a0700
-push $Ne65a0e00
-push $Ne65a1500
-push $Ne65a1c00
-push $Ne655c380
-push $Ne655ca80
-push $Ne655d180
-push $Ne655d880
-push $Ne6520000
-push $Ne6520700
-push $Ne6520e00
-push $Ne6521500
-push $Ne6521c00
-push $Ne64e2380
-push $Ne64e2a80
-push $Ne64e3180
-push $Ne64e3880
-push $Ne6494000
-push $Ne6494380
+push $N961af290
+push $N9618e040
+push $N650ecdc0
+push $N650cb3d0
+push $N650aa180
+push $N730a1730
+push $N730f1530
+push $N730a5f40
+push $N730cd3c0
  Merge2 {
   inputs 2
-  operation {{Merge_Proxy.operation1}}
   also_merge all
   name m0
+  xpos 620
+  ypos 686
  }
  Merge2 {
   inputs 2
-  operation {{Merge_Proxy.operation1}}
   also_merge all
   name m1
+  xpos 620
+  ypos 710
  }
  Merge2 {
   inputs 2
-  operation {{Merge_Proxy.operation1}}
   also_merge all
   name m2
+  xpos 620
+  ypos 734
  }
  Merge2 {
   inputs 2
-  operation {{Merge_Proxy.operation1}}
   also_merge all
   name m3
+  xpos 620
+  ypos 758
  }
  Merge2 {
   inputs 2
-  operation {{Merge_Proxy.operation1}}
   also_merge all
   name m4
+  xpos 620
+  ypos 782
  }
  Merge2 {
   inputs 2
-  operation {{Merge_Proxy.operation1}}
   also_merge all
   name m5
+  xpos 620
+  ypos 806
  }
  Merge2 {
   inputs 2
-  operation {{Merge_Proxy.operation1}}
   also_merge all
   name m6
+  xpos 620
+  ypos 830
  }
  Merge2 {
   inputs 2
-  operation {{Merge_Proxy.operation1}}
   also_merge all
   name m7
+  xpos 620
+  ypos 854
  }
  Merge2 {
   inputs 2
-  operation {{Merge_Proxy.operation1}}
   also_merge all
   name m8
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m9
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m10
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m11
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m12
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m13
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m14
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m15
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m16
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m17
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m18
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m19
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m20
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m21
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m22
- }
- Merge2 {
-  inputs 2
-  operation {{Merge_Proxy.operation1}}
-  also_merge all
-  name m23
+  xpos 620
+  ypos 878
  }
  NoOp {
   name COPIES1_end
@@ -610,45 +370,13 @@ push $Ne6494380
  }
  NoOp {
   inputs 0
-  name PROXY
-  knobChanged "\nm = nuke.thisNode()\nkc = nuke.thisKnob()\n\nif kc.name() in \[\"copies\"]:\n\n    for n in nuke.allNodes():\n        if \"static\" not in n\['label'].getValue():\n            nuke.delete(n)\n\n    \n    iRep = m.knob('copies').getValue()\n    iRepeats = int(iRep)-1\n    bfirstLoop = True\n    \n    # Main Transform for Copy1\n    w = nuke.toNode('Trans_COPY1')\n    \n    # Last Merge connected to this\n    b = nuke.toNode('COPIES1_end')\n    \n    # Dot would be connected to this and allows toggle between original and modified source \n    s = nuke.toNode('Switch1')\n    \n    nDot = nuke.nodes.Dot()\n    nDot.setInput(0, s)\n    \n    if (iRepeats+1) >= 2: \n    \n        for i in range(iRepeats):\n            CTrans = nuke.nodes.Transform(name = \"t\" + str(i))\n            CTrans.knob('translate').setExpression('Trans_COPY1.translate')\n            CTrans.knob('rotate').setExpression('Trans_COPY1.rotate')\n            CTrans.knob('scale').setExpression('Trans_COPY1.scale')\n            CTrans.knob('skewX').setExpression('Trans_COPY1.skewX')\n            CTrans.knob('skewY').setExpression('Trans_COPY1.skewY')\n            CTrans.knob('skew_order').setExpression('Trans_COPY1.skew_order')\n            CTrans.knob('center').setExpression('Trans_COPY1.center')\n            CTrans.knob('invert_matrix').setExpression('Trans_COPY1.invert_matrix')\n            CTrans.knob('filter').setExpression('Trans_COPY1.filter')\n            nMerge = nuke.nodes.Merge2(name = \"m\" + str(i))\n            nMerge.knob('also_merge').setValue('all')\n            nMerge.knob('operation').setExpression('Merge_Proxy.operation1')\n            nMerge.setInput(1, CTrans)\n            \n            if bfirstLoop:\n                bfirstLoop = False\n                CTrans.setInput(0, nDot)\n                nMerge.setInput(0, nDot)\n            else:\n                CTrans.setInput(0, nPrevTrans)\n                nMerge.setInput(0, nPrevMerge)\n        \n            nPrevMerge = nMerge\n            nPrevTrans = CTrans\n        \n        MNum = int(iRepeats) - 1\n        \n        p = nuke.toNode(\"m\" + str(MNum))\n        \n        b.setInput(0, p)\n    else:\n        b.setInput(0, nDot)\n\n"
-  label static
-  xpos 840
-  ypos 272
-  addUserKnob {20 User}
-  addUserKnob {3 copies l Copies}
-  copies 25
- }
- NoOp {
-  inputs 0
   name Merge_Proxy
   label static
   xpos 620
   ypos 464
   addUserKnob {20 User}
   addUserKnob {4 operation1 M {atop average color-burn color-dodge conjoint-over copy difference disjoint-over divide exclusion from geometric hard-light hypot in mask matte max min minus multiply out over overlay plus screen soft-light stencil under xor}}
-  operation1 minus
- }
- NoOp {
-  inputs 0
-  name Trans_COPY1_proxy
-  label static
-  xpos 290
-  ypos 632
-  addUserKnob {20 User}
-  addUserKnob {12 translate1}
-  translate1 {20 55}
-  addUserKnob {7 rotate1 R -180 180}
-  addUserKnob {14 scale1 R 0 100}
-  scale1 0.9
-  addUserKnob {7 skewX1 R -1 1}
-  addUserKnob {7 skewY1 R -1 1}
-  addUserKnob {4 skeworder1 M {XY YX}}
-  addUserKnob {12 center1}
-  center1 {960 540}
-  addUserKnob {6 invert1 +STARTLINE}
-  addUserKnob {4 filter1 M {Impulse Cubic Keys Simon Rifman Mitchell Parzen Notsch Lanczos4 Lanczos6 Sinc4}}
-  filter1 Cubic
+  operation1 over
  }
  NoOp {
   inputs 0
@@ -660,7 +388,7 @@ push $Ne6494380
   addUserKnob {12 translate2}
   addUserKnob {7 rotate2 R -180 180}
   addUserKnob {14 scale2 R 0 100}
-  scale2 0.8
+  scale2 1
   addUserKnob {7 skewX2 R -1 1}
   addUserKnob {7 skewY2 R -1 1}
   addUserKnob {4 skeworder2 M {XY YX ""}}
@@ -669,5 +397,41 @@ push $Ne6494380
   addUserKnob {6 invert2 +STARTLINE}
   addUserKnob {4 filter2 M {Impulse Cubic Keys Simon Rifman Mitchell Parzen Notsch Lanczos4 Lanczos6 Sinc4 ""}}
   filter2 Cubic
+ }
+ NoOp {
+  inputs 0
+  name PROXY
+  knobChanged "\nm = nuke.thisNode()\nkc = nuke.thisKnob()\nif kc.name() in \[\"copies\"]:\n    for n in nuke.allNodes():\n        if \"static\" not in n\['label'].getValue():\n            nuke.delete(n)\n    \n    iRep = m.knob('copies').getValue()\n    iRepeats = int(iRep)-1\n    bfirstLoop = True\n    \n    # Main Transform for Copy1\n    w = nuke.toNode('Trans_COPY1')\n    \n    # Last Merge connected to this\n    b = nuke.toNode('COPIES1_end')\n    \n    # Dot would be connected to this and allows toggle between original and modified source \n    s = nuke.toNode('Switch1')\n    \n    nDot = nuke.nodes.Dot()\n    nDot.setInput(0, s)\n    \n    if (iRepeats+1) >= 2: \n    \n        for i in range(iRepeats):\n            CTrans = nuke.nodes.Transform(name = \"t\" + str(i))\n            CTrans.knob('translate').setExpression('Trans_COPY1.translate')\n            CTrans.knob('rotate').setExpression('Trans_COPY1.rotate')\n            CTrans.knob('scale').setExpression('Trans_COPY1.scale')\n            CTrans.knob('skewX').setExpression('Trans_COPY1.skewX')\n            CTrans.knob('skewY').setExpression('Trans_COPY1.skewY')\n            CTrans.knob('skew_order').setExpression('Trans_COPY1.skew_order')\n            CTrans.knob('center').setExpression('Trans_COPY1.center')\n            CTrans.knob('invert_matrix').setExpression('Trans_COPY1.invert_matrix')\n            CTrans.knob('filter').setExpression('Trans_COPY1.filter')\n            CTrans.knob('motionblur').setExpression('Trans_COPY1.motionblur')\n            CTrans.knob('shutter').setExpression('Trans_COPY1.shutter')\n            CTrans.knob('shutteroffset').setValue(0)\n            nMerge = nuke.nodes.Merge2(name = \"m\" + str(i))\n            nMerge.knob('also_merge').setValue('all')\n            nMerge.setInput(1, CTrans)\n            \n            if bfirstLoop:\n                bfirstLoop = False\n                CTrans.setInput(0, nDot)\n                nMerge.setInput(0, nDot)\n            else:\n                CTrans.setInput(0, nPrevTrans)\n                nMerge.setInput(0, nPrevMerge)\n        \n            nPrevMerge = nMerge\n            nPrevTrans = CTrans\n        \n        MNum = int(iRepeats) - 1\n        \n        p = nuke.toNode(\"m\" + str(MNum))\n        \n        b.setInput(0, p)\n    else:\n        b.setInput(0, nDot)\n"
+  label static
+  xpos 840
+  ypos 272
+  addUserKnob {20 User}
+  addUserKnob {3 copies l Copies}
+  copies 10
+ }
+ NoOp {
+  inputs 0
+  name Trans_COPY1_proxy
+  label static
+  xpos 290
+  ypos 633
+  addUserKnob {20 User}
+  addUserKnob {12 translate1}
+  addUserKnob {7 rotate1 R -180 180}
+  rotate1 20
+  addUserKnob {14 scale1 R 0 100}
+  scale1 0.8
+  addUserKnob {7 skewX1 R -1 1}
+  addUserKnob {7 skewY1 R -1 1}
+  addUserKnob {4 skeworder1 M {XY YX}}
+  addUserKnob {12 center1}
+  center1 {960 540}
+  addUserKnob {6 invert1 +STARTLINE}
+  addUserKnob {4 filter1 M {Impulse Cubic Keys Simon Rifman Mitchell Parzen Notsch Lanczos4 Lanczos6 Sinc4}}
+  filter1 Cubic
+  addUserKnob {7 motionblur1 R 0 4}
+  motionblur1 1
+  addUserKnob {7 shutter1 R 0 2}
+  shutter1 0.5
  }
 end_group
