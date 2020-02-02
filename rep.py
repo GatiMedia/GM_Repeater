@@ -36,6 +36,9 @@ if kc.name() in ["copies"]:
     
         for i in range(iRepeats):
             RepNum = int(i)+1
+            RepNum2 = int(i)+2
+            nMult.knob('ReMax').setValue( RepMax )
+            nMult.knob('value').setExpression('((1/(ReMax-1))*(ReMax-(ReMax-ReNum))) + ( ( 1- ((1/(ReMax-1))*(ReMax-(ReMax-ReNum))) ) * Trans_COPY1_proxy.fadein )')
             CTrans = nuke.nodes.Transform(name = "t" + str(i))
             CTrans.knob('translate').setExpression('Trans_COPY1.translate')
             CTrans.knob('rotate').setExpression('Trans_COPY1.rotate')
@@ -58,7 +61,7 @@ if kc.name() in ["copies"]:
             CMult1.knob('ReNum').setValue( RepNum )
             CMult1.knob('value').setExpression('((1/(ReMax-1))*(ReMax-ReNum)) + ( ( 1- ((1/(ReMax-1))*(ReMax-ReNum)) ) * Trans_COPY1_proxy.fadeout )')
             CMult1.setInput(0, CTrans)
-            CMult2 = nuke.nodes.Multiply(name = "mu1t2_" + str(RepNum))
+            CMult2 = nuke.nodes.Multiply(name = "mu1t2_" + str(RepNum2))
             k = nuke.Int_Knob('ReMax', 'ReMax' )
             k2 = nuke.Int_Knob('ReNum', 'ReNum' )
             CMult2.addKnob(k)
@@ -96,10 +99,8 @@ if kc.name() in ["copies"]:
         b.setInput(0, p)
     else:
         b.setInput(0, nDot)
-        nMult.knob('ReMax').setValue( RepMax )
-        nMult.knob('value').setExpression('((1/(ReMax-1))*(ReMax-(ReMax-ReNum))) + ( ( 1- ((1/(ReMax-1))*(ReMax-(ReMax-ReNum))) ) * Trans_COPY1_proxy.fadein )')
+
 """)
 
 
 Rep.end()
-
