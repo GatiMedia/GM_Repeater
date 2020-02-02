@@ -17,7 +17,7 @@ Group {
  addUserKnob {41 copies l Copies T PROXY.copies}
  addUserKnob {41 fadeout1 l "Fade Out" T Trans_COPY1_proxy.fadeout1}
  addUserKnob {41 fadein1 l "Fade In" T Trans_COPY1_proxy.fadein1}
- addUserKnob {6 apply_on_copy1 l "Apply Transform on Original Shape" +STARTLINE}
+ addUserKnob {6 apply_on_copy1 l "Apply Transform on Input Image" +STARTLINE}
  apply_on_copy1 true
  addUserKnob {41 operation1 l Operation T Merge_Proxy.operation1}
  addUserKnob {41 translate1 l translate T Trans_COPY1_proxy.translate1}
@@ -38,6 +38,8 @@ Group {
  addUserKnob {6 crop l Crop +STARTLINE}
  crop true
  addUserKnob {26 ""}
+ addUserKnob {22 tut l Tutorial T "import os\nimport sys\n\ntry:\n    import subprocess\n    def _run(cmd, shell, wait):\n        opener = subprocess.Popen(cmd, shell=shell)\n        if wait:\n            opener.wait()\n        return opener.pid\nexcept ImportError:\n    import popen2\n    def _run(cmd, shell, wait):\n        opener = popen2.Popen3(cmd)\n        if wait:\n            opener.wait()\n        return opener.pid\n\ndef _open(url, wait=0):\n    if sys.platform == \"darwin\":\n        cmd = \[\"open\", url]\n    elif hasattr(os, \"startfile\"):\n        return os.startfile(url)\n    elif os.environ.has_key(\"KDE_FULL_SESSION\") or os.environ.has_key(\"KDE_MULTIHEAD\") or \\\n        os.environ.has_key(\"GNOME_DESKTOP_SESSION_ID\") or os.environ.has_key(\"GNOME_KEYRING_SOCKET\"):\n        cmd = \[\"xdg-open\", url]\n    else:\n        raise OSError, \"Desktop not supported.\"\n\n    return _run(cmd, 0, wait)\n\n_open('https://www.gatimedia.co.uk/repeater')\n" +STARTLINE}
+ addUserKnob {26 "" +STARTLINE}
  addUserKnob {26 TEXT l "" +STARTLINE T "<font color=#808080 size=\"5\" >1.01 version</font>"}
  addUserKnob {26 HeadlineB l "" +STARTLINE T "<font color=#808080 size=\"2\">GM_Repeater© by Attila Gasparetz</font>"}
 }
@@ -46,7 +48,7 @@ Group {
   name BackdropNode1
   tile_color 0xff
   label "<center><font color=red>DON`T TOUCH\nstatic"
-  note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold"
+  note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold"
   note_font_size 42
   xpos 738
   ypos 63
@@ -76,8 +78,8 @@ Group {
   xpos 510
   ypos 464
  }
-set Nc5436a80 [stack 0]
-push $Nc5436a80
+set N827c000 [stack 0]
+push $N827c000
  Transform {
   translate {{Trans_COPY1_proxy.translate1} {Trans_COPY1_proxy.translate1}}
   rotate {{Trans_COPY1_proxy.rotate1}}
@@ -104,21 +106,11 @@ push $Nc5436a80
   xpos 510
   ypos 632
  }
-set Nc5436380 [stack 0]
- Multiply {
-  value 0
-  name mu1t2_8
-  label static
-  xpos 620
-  ypos 625
-  addUserKnob {20 User}
-  addUserKnob {3 ReMax}
-  addUserKnob {3 ReNum}
-  ReNum 1
- }
-push $Nc5436380
+set Nc1607880 [stack 0]
  Dot {
   name Dot1
+  xpos 544
+  ypos 670
  }
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
@@ -134,8 +126,10 @@ push $Nc5436380
   shutter {{Trans_COPY1.shutter}}
   shutteroffset centred
   name t0
+  xpos 510
+  ypos 688
  }
-set Nf861b500 [stack 0]
+set N132c8380 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -150,8 +144,10 @@ set Nf861b500 [stack 0]
   shutter {{Trans_COPY1.shutter}}
   shutteroffset centred
   name t1
+  xpos 620
+  ypos 714
  }
-set Nf861a700 [stack 0]
+set Nb0dd7500 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -166,8 +162,10 @@ set Nf861a700 [stack 0]
   shutter {{Trans_COPY1.shutter}}
   shutteroffset centred
   name t2
+  xpos 730
+  ypos 740
  }
-set Nf8657880 [stack 0]
+set Nb0dd6700 [stack 0]
  Transform {
   translate {{Trans_COPY1.translate} {Trans_COPY1.translate}}
   rotate {{Trans_COPY1.rotate}}
@@ -182,106 +180,144 @@ set Nf8657880 [stack 0]
   shutter {{Trans_COPY1.shutter}}
   shutteroffset centred
   name t3
+  xpos 840
+  ypos 766
  }
  Multiply {
   value {{"((1/(ReMax-1))*(ReMax-ReNum)) + ( ( 1- ((1/(ReMax-1))*(ReMax-ReNum)) ) * Trans_COPY1_proxy.fadeout )"}}
   name mu1_3
+  xpos 840
+  ypos 792
   addUserKnob {20 User}
   addUserKnob {3 ReMax}
   ReMax 5
   addUserKnob {3 ReNum}
   ReNum 4
+ }
+ Multiply {
+  value {{"((1/(ReMax-1))*(ReMax-(ReMax-ReNum))) + ( ( 1- ((1/(ReMax-1))*(ReMax-(ReMax-ReNum))) ) * Trans_COPY1_proxy.fadein )"}}
+  name mu1t2_5
+  xpos 840
+  ypos 818
+  addUserKnob {20 User}
+  addUserKnob {3 ReMax}
+  ReMax 5
+  addUserKnob {3 ReNum}
+  ReNum 4
+ }
+push $Nb0dd6700
+ Multiply {
+  value {{"((1/(ReMax-1))*(ReMax-ReNum)) + ( ( 1- ((1/(ReMax-1))*(ReMax-ReNum)) ) * Trans_COPY1_proxy.fadeout )"}}
+  name mu1_2
+  xpos 730
+  ypos 766
+  addUserKnob {20 User}
+  addUserKnob {3 ReMax}
+  ReMax 5
+  addUserKnob {3 ReNum}
+  ReNum 3
  }
  Multiply {
   value {{"((1/(ReMax-1))*(ReMax-(ReMax-ReNum))) + ( ( 1- ((1/(ReMax-1))*(ReMax-(ReMax-ReNum))) ) * Trans_COPY1_proxy.fadein )"}}
   name mu1t2_4
-  addUserKnob {20 User}
-  addUserKnob {3 ReMax}
-  ReMax 5
-  addUserKnob {3 ReNum}
-  ReNum 4
- }
-push $Nf8657880
- Multiply {
-  value {{"((1/(ReMax-1))*(ReMax-ReNum)) + ( ( 1- ((1/(ReMax-1))*(ReMax-ReNum)) ) * Trans_COPY1_proxy.fadeout )"}}
-  name mu1_2
+  xpos 730
+  ypos 792
   addUserKnob {20 User}
   addUserKnob {3 ReMax}
   ReMax 5
   addUserKnob {3 ReNum}
   ReNum 3
+ }
+push $Nb0dd7500
+ Multiply {
+  value {{"((1/(ReMax-1))*(ReMax-ReNum)) + ( ( 1- ((1/(ReMax-1))*(ReMax-ReNum)) ) * Trans_COPY1_proxy.fadeout )"}}
+  name mu1_1
+  xpos 620
+  ypos 740
+  addUserKnob {20 User}
+  addUserKnob {3 ReMax}
+  ReMax 5
+  addUserKnob {3 ReNum}
+  ReNum 2
  }
  Multiply {
   value {{"((1/(ReMax-1))*(ReMax-(ReMax-ReNum))) + ( ( 1- ((1/(ReMax-1))*(ReMax-(ReMax-ReNum))) ) * Trans_COPY1_proxy.fadein )"}}
   name mu1t2_3
-  addUserKnob {20 User}
-  addUserKnob {3 ReMax}
-  ReMax 5
-  addUserKnob {3 ReNum}
-  ReNum 3
- }
-push $Nf861a700
- Multiply {
-  value {{"((1/(ReMax-1))*(ReMax-ReNum)) + ( ( 1- ((1/(ReMax-1))*(ReMax-ReNum)) ) * Trans_COPY1_proxy.fadeout )"}}
-  name mu1_1
+  xpos 620
+  ypos 766
   addUserKnob {20 User}
   addUserKnob {3 ReMax}
   ReMax 5
   addUserKnob {3 ReNum}
   ReNum 2
+ }
+push $N132c8380
+ Multiply {
+  value {{"((1/(ReMax-1))*(ReMax-ReNum)) + ( ( 1- ((1/(ReMax-1))*(ReMax-ReNum)) ) * Trans_COPY1_proxy.fadeout )"}}
+  name mu1_0
+  xpos 510
+  ypos 714
+  addUserKnob {20 User}
+  addUserKnob {3 ReMax}
+  ReMax 5
+  addUserKnob {3 ReNum}
+  ReNum 1
  }
  Multiply {
   value {{"((1/(ReMax-1))*(ReMax-(ReMax-ReNum))) + ( ( 1- ((1/(ReMax-1))*(ReMax-(ReMax-ReNum))) ) * Trans_COPY1_proxy.fadein )"}}
   name mu1t2_2
-  addUserKnob {20 User}
-  addUserKnob {3 ReMax}
-  ReMax 5
-  addUserKnob {3 ReNum}
-  ReNum 2
- }
-push $Nf861b500
- Multiply {
-  value {{"((1/(ReMax-1))*(ReMax-ReNum)) + ( ( 1- ((1/(ReMax-1))*(ReMax-ReNum)) ) * Trans_COPY1_proxy.fadeout )"}}
-  name mu1_0
+  xpos 510
+  ypos 753
   addUserKnob {20 User}
   addUserKnob {3 ReMax}
   ReMax 5
   addUserKnob {3 ReNum}
   ReNum 1
  }
+push $Nc1607880
  Multiply {
   value {{"((1/(ReMax-1))*(ReMax-(ReMax-ReNum))) + ( ( 1- ((1/(ReMax-1))*(ReMax-(ReMax-ReNum))) ) * Trans_COPY1_proxy.fadein )"}}
   name mu1t2_1
+  label static
+  xpos 695
+  ypos 577
   addUserKnob {20 User}
   addUserKnob {3 ReMax}
   ReMax 5
   addUserKnob {3 ReNum}
   ReNum 1
  }
-push 0
  Merge2 {
   inputs 2
   operation {{Merge_Proxy.operation1}}
   also_merge all
   name m0
+  xpos 695
+  ypos 753
  }
  Merge2 {
   inputs 2
   operation {{Merge_Proxy.operation1}}
   also_merge all
   name m1
+  xpos 695
+  ypos 779
  }
  Merge2 {
   inputs 2
   operation {{Merge_Proxy.operation1}}
   also_merge all
   name m2
+  xpos 730
+  ypos 844
  }
  Merge2 {
   inputs 2
   operation {{Merge_Proxy.operation1}}
   also_merge all
   name m3
+  xpos 840
+  ypos 844
  }
  NoOp {
   name COPIES1_end
@@ -333,7 +369,7 @@ push 0
  NoOp {
   inputs 0
   name PROXY
-  knobChanged "\nm = nuke.thisNode()\nkc = nuke.thisKnob()\nif kc.name() in \[\"copies\"]:\n    for n in nuke.allNodes():\n        if \"static\" not in n\['label'].getValue():\n            nuke.delete(n)\n    \n    iRep = m.knob('copies').getValue()\n    iRepeats = int(iRep)-1\n    RepMax = int(iRep)\n    bfirstLoop = True\n    \n    # Main Transform for Copy1\n    w = nuke.toNode('Trans_COPY1')\n    \n    # Last Merge connected to this\n    b = nuke.toNode('COPIES1_end')\n    \n    # Dot would be connected to this and allows toggle between original and modified source \n    s = nuke.toNode('Switch1')\n    \n    nDot = nuke.nodes.Dot()\n    nDot.setInput(0, s)\n\n    nMult = nuke.toNode('mu1t2_1')\n    \n    if (iRepeats+1) >= 2: \n    \n        for i in range(iRepeats):\n            RepNum = int(i)+1\n            CTrans = nuke.nodes.Transform(name = \"t\" + str(i))\n            CTrans.knob('translate').setExpression('Trans_COPY1.translate')\n            CTrans.knob('rotate').setExpression('Trans_COPY1.rotate')\n            CTrans.knob('scale').setExpression('Trans_COPY1.scale')\n            CTrans.knob('skewX').setExpression('Trans_COPY1.skewX')\n            CTrans.knob('skewY').setExpression('Trans_COPY1.skewY')\n            CTrans.knob('skew_order').setExpression('Trans_COPY1.skew_order')\n            CTrans.knob('center').setExpression('Trans_COPY1.center')\n            CTrans.knob('invert_matrix').setExpression('Trans_COPY1.invert_matrix')\n            CTrans.knob('filter').setExpression('Trans_COPY1.filter')\n            CTrans.knob('motionblur').setExpression('Trans_COPY1.motionblur')\n            CTrans.knob('shutter').setExpression('Trans_COPY1.shutter')\n            CTrans.knob('shutteroffset').setValue(0)\n            CMult1 = nuke.nodes.Multiply(name = \"mu1_\" + str(i))\n            k = nuke.Int_Knob('ReMax', 'ReMax' )\n            k2 = nuke.Int_Knob('ReNum', 'ReNum' )\n            CMult1.addKnob(k)\n            CMult1.addKnob(k2)\n            CMult1.knob('ReMax').setValue( RepMax )\n            CMult1.knob('ReNum').setValue( RepNum )\n            CMult1.knob('value').setExpression('((1/(ReMax-1))*(ReMax-ReNum)) + ( ( 1- ((1/(ReMax-1))*(ReMax-ReNum)) ) * Trans_COPY1_proxy.fadeout )')\n            CMult1.setInput(0, CTrans)\n            CMult2 = nuke.nodes.Multiply(name = \"mu1t2_\" + str(RepNum))\n            k = nuke.Int_Knob('ReMax', 'ReMax' )\n            k2 = nuke.Int_Knob('ReNum', 'ReNum' )\n            CMult2.addKnob(k)\n            CMult2.addKnob(k2)\n            CMult2.knob('ReMax').setValue( RepMax )\n            CMult2.knob('ReNum').setValue( RepNum )\n            CMult2.knob('value').setExpression('((1/(ReMax-1))*(ReMax-(ReMax-ReNum))) + ( ( 1- ((1/(ReMax-1))*(ReMax-(ReMax-ReNum))) ) * Trans_COPY1_proxy.fadein )')\n            CMult2.setInput(0, CMult1)\n            nMerge = nuke.nodes.Merge2(name = \"m\" + str(i))\n            nMerge.knob('also_merge').setValue('all')\n            nMerge.knob('operation').setExpression('Merge_Proxy.operation1')\n            nMerge.setInput(1, CMult2)\n            \n            if bfirstLoop:\n                bfirstLoop = False\n                CTrans.setInput(0, nDot)\n                CMult1.setInput(0, CTrans)\n                CMult2.setInput(0, CMult1)\n                nMerge.setInput(0, nMult)\n            else:\n                CTrans.setInput(0, nPrevTrans)\n                CMult1.setInput(0, CTrans)\n                CMult2.setInput(0, CMult1)\n                nMerge.setInput(0, nPrevMerge)\n \n            nPrevMerge = nMerge\n            nPrevTrans = CTrans\n            nPrevMult1 = CMult1\n            nPrevMult2 = CMult2\n        \n        MNum = int(iRepeats) - 1\n        \n        p = nuke.toNode(\"m\" + str(MNum))\n        \n        b.setInput(0, p)\n    else:\n        b.setInput(0, nDot)\n        nMult.knob('ReMax').setValue( RepMax )\n        nMult.knob('value').setExpression('((1/(ReMax-1))*(ReMax-(ReMax-ReNum))) + ( ( 1- ((1/(ReMax-1))*(ReMax-(ReMax-ReNum))) ) * Trans_COPY1_proxy.fadein )')\n"
+  knobChanged "\nm = nuke.thisNode()\nkc = nuke.thisKnob()\nif kc.name() in \[\"copies\"]:\n    for n in nuke.allNodes():\n        if \"static\" not in n\['label'].getValue():\n            nuke.delete(n)\n    \n    iRep = m.knob('copies').getValue()\n    iRepeats = int(iRep)-1\n    RepMax = int(iRep)\n    bfirstLoop = True\n    \n    # Main Transform for Copy1\n    w = nuke.toNode('Trans_COPY1')\n    \n    # Last Merge connected to this\n    b = nuke.toNode('COPIES1_end')\n    \n    # Dot would be connected to this and allows toggle between original and modified source \n    s = nuke.toNode('Switch1')\n    \n    nDot = nuke.nodes.Dot()\n    nDot.setInput(0, s)\n\n    nMult = nuke.toNode('mu1t2_1')\n    \n    if (iRepeats+1) >= 2: \n    \n        for i in range(iRepeats):\n            RepNum = int(i)+1\n            RepNum2 = int(i)+2\n            nMult.knob('ReMax').setValue( RepMax )\n            nMult.knob('value').setExpression('((1/(ReMax-1))*(ReMax-(ReMax-ReNum))) + ( ( 1- ((1/(ReMax-1))*(ReMax-(ReMax-ReNum))) ) * Trans_COPY1_proxy.fadein )')\n            CTrans = nuke.nodes.Transform(name = \"t\" + str(i))\n            CTrans.knob('translate').setExpression('Trans_COPY1.translate')\n            CTrans.knob('rotate').setExpression('Trans_COPY1.rotate')\n            CTrans.knob('scale').setExpression('Trans_COPY1.scale')\n            CTrans.knob('skewX').setExpression('Trans_COPY1.skewX')\n            CTrans.knob('skewY').setExpression('Trans_COPY1.skewY')\n            CTrans.knob('skew_order').setExpression('Trans_COPY1.skew_order')\n            CTrans.knob('center').setExpression('Trans_COPY1.center')\n            CTrans.knob('invert_matrix').setExpression('Trans_COPY1.invert_matrix')\n            CTrans.knob('filter').setExpression('Trans_COPY1.filter')\n            CTrans.knob('motionblur').setExpression('Trans_COPY1.motionblur')\n            CTrans.knob('shutter').setExpression('Trans_COPY1.shutter')\n            CTrans.knob('shutteroffset').setValue(0)\n            CMult1 = nuke.nodes.Multiply(name = \"mu1_\" + str(i))\n            k = nuke.Int_Knob('ReMax', 'ReMax' )\n            k2 = nuke.Int_Knob('ReNum', 'ReNum' )\n            CMult1.addKnob(k)\n            CMult1.addKnob(k2)\n            CMult1.knob('ReMax').setValue( RepMax )\n            CMult1.knob('ReNum').setValue( RepNum )\n            CMult1.knob('value').setExpression('((1/(ReMax-1))*(ReMax-ReNum)) + ( ( 1- ((1/(ReMax-1))*(ReMax-ReNum)) ) * Trans_COPY1_proxy.fadeout )')\n            CMult1.setInput(0, CTrans)\n            CMult2 = nuke.nodes.Multiply(name = \"mu1t2_\" + str(RepNum2))\n            k = nuke.Int_Knob('ReMax', 'ReMax' )\n            k2 = nuke.Int_Knob('ReNum', 'ReNum' )\n            CMult2.addKnob(k)\n            CMult2.addKnob(k2)\n            CMult2.knob('ReMax').setValue( RepMax )\n            CMult2.knob('ReNum').setValue( RepNum )\n            CMult2.knob('value').setExpression('((1/(ReMax-1))*(ReMax-(ReMax-ReNum))) + ( ( 1- ((1/(ReMax-1))*(ReMax-(ReMax-ReNum))) ) * Trans_COPY1_proxy.fadein )')\n            CMult2.setInput(0, CMult1)\n            nMerge = nuke.nodes.Merge2(name = \"m\" + str(i))\n            nMerge.knob('also_merge').setValue('all')\n            nMerge.knob('operation').setExpression('Merge_Proxy.operation1')\n            nMerge.setInput(1, CMult2)\n            \n            if bfirstLoop:\n                bfirstLoop = False\n                CTrans.setInput(0, nDot)\n                CMult1.setInput(0, CTrans)\n                CMult2.setInput(0, CMult1)\n                nMerge.setInput(0, nMult)\n            else:\n                CTrans.setInput(0, nPrevTrans)\n                CMult1.setInput(0, CTrans)\n                CMult2.setInput(0, CMult1)\n                nMerge.setInput(0, nPrevMerge)\n \n            nPrevMerge = nMerge\n            nPrevTrans = CTrans\n            nPrevMult1 = CMult1\n            nPrevMult2 = CMult2\n        \n        MNum = int(iRepeats) - 1\n        \n        p = nuke.toNode(\"m\" + str(MNum))\n        \n        b.setInput(0, p)\n    else:\n        b.setInput(0, nDot)\n\n"
   label static
   xpos 840
   ypos 272
