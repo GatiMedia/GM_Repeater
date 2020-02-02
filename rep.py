@@ -1,20 +1,21 @@
 #####Code for GM_Repeater#####
 
 
-Rep = nuke.toNode('GM_ShapeRepeater')
+Rep = nuke.toNode('GM_Repeater1')
 
 Rep.begin()
 
-nuke.toNode('PROXY_MAIN1').knob('knobChanged').setValue("""
+nuke.toNode('PROXY').knob('knobChanged').setValue("""
 m = nuke.thisNode()
 kc = nuke.thisKnob()
-if kc.name() in ["copy1"]:
+if kc.name() in ["copies"]:
     for n in nuke.allNodes():
         if "static" not in n['label'].getValue():
             nuke.delete(n)
     
-    iRep = m.knob('copy1').getValue()
+    iRep = m.knob('copies').getValue()
     iRepeats = int(iRep)-1
+    RepMax = int(iRep)
     bfirstLoop = True
     
     # Main Transform for Copy1
@@ -28,10 +29,13 @@ if kc.name() in ["copy1"]:
     
     nDot = nuke.nodes.Dot()
     nDot.setInput(0, s)
+
+    nMult = nuke.toNode('mu1t2_1')
     
     if (iRepeats+1) >= 2: 
     
         for i in range(iRepeats):
+            RepNum = int(i)+1
             CTrans = nuke.nodes.Transform(name = "t" + str(i))
             CTrans.knob('translate').setExpression('Trans_COPY1.translate')
             CTrans.knob('rotate').setExpression('Trans_COPY1.rotate')
@@ -45,20 +49,45 @@ if kc.name() in ["copy1"]:
             CTrans.knob('motionblur').setExpression('Trans_COPY1.motionblur')
             CTrans.knob('shutter').setExpression('Trans_COPY1.shutter')
             CTrans.knob('shutteroffset').setValue(0)
+            CMult1 = nuke.nodes.Multiply(name = "mu1_" + str(i))
+            k = nuke.Int_Knob('ReMax', 'ReMax' )
+            k2 = nuke.Int_Knob('ReNum', 'ReNum' )
+            CMult1.addKnob(k)
+            CMult1.addKnob(k2)
+            CMult1.knob('ReMax').setValue( RepMax )
+            CMult1.knob('ReNum').setValue( RepNum )
+            CMult1.knob('value').setExpression('((1/(ReMax-1))*(ReMax-ReNum)) + ( ( 1- ((1/(ReMax-1))*(ReMax-ReNum)) ) * Trans_COPY1_proxy.fadeout )')
+            CMult1.setInput(0, CTrans)
+            CMult2 = nuke.nodes.Multiply(name = "mu1t2_" + str(RepNum))
+            k = nuke.Int_Knob('ReMax', 'ReMax' )
+            k2 = nuke.Int_Knob('ReNum', 'ReNum' )
+            CMult2.addKnob(k)
+            CMult2.addKnob(k2)
+            CMult2.knob('ReMax').setValue( RepMax )
+            CMult2.knob('ReNum').setValue( RepNum )
+            CMult2.knob('value').setExpression('((1/(ReMax-1))*(ReMax-(ReMax-ReNum))) + ( ( 1- ((1/(ReMax-1))*(ReMax-(ReMax-ReNum))) ) * Trans_COPY1_proxy.fadein )')
+            CMult2.setInput(0, CMult1)
             nMerge = nuke.nodes.Merge2(name = "m" + str(i))
             nMerge.knob('also_merge').setValue('all')
-            nMerge.setInput(1, CTrans)
+            nMerge.knob('operation').setExpression('Merge_Proxy.operation1')
+            nMerge.setInput(1, CMult2)
             
             if bfirstLoop:
                 bfirstLoop = False
                 CTrans.setInput(0, nDot)
-                nMerge.setInput(0, nDot)
+                CMult1.setInput(0, CTrans)
+                CMult2.setInput(0, CMult1)
+                nMerge.setInput(0, nMult)
             else:
                 CTrans.setInput(0, nPrevTrans)
+                CMult1.setInput(0, CTrans)
+                CMult2.setInput(0, CMult1)
                 nMerge.setInput(0, nPrevMerge)
-        
+ 
             nPrevMerge = nMerge
             nPrevTrans = CTrans
+            nPrevMult1 = CMult1
+            nPrevMult2 = CMult2
         
         MNum = int(iRepeats) - 1
         
@@ -67,7 +96,10 @@ if kc.name() in ["copy1"]:
         b.setInput(0, p)
     else:
         b.setInput(0, nDot)
+        nMult.knob('ReMax').setValue( RepMax )
+        nMult.knob('value').setExpression('((1/(ReMax-1))*(ReMax-(ReMax-ReNum))) + ( ( 1- ((1/(ReMax-1))*(ReMax-(ReMax-ReNum))) ) * Trans_COPY1_proxy.fadein )')
 """)
 
 
 Rep.end()
+
