@@ -1,7 +1,7 @@
 #####Code for GM_Repeater#####
 
 
-Rep = nuke.toNode('GM_Repeater1')
+Rep = nuke.toNode('GM_Repeater')
 
 Rep.begin()
 
@@ -42,7 +42,9 @@ if kc.name() in ["copies"]:
             CTrans = nuke.nodes.Transform(name = "t" + str(i))
             CTrans.knob('translate').setExpression('Trans_COPY1.translate')
             CTrans.knob('rotate').setExpression('Trans_COPY1.rotate')
-            CTrans.knob('scale').setExpression('Trans_COPY1.scale')
+            CTrans['scale'].setSingleValue(False)
+            CTrans['scale'].setExpression(('Trans_COPY1.scale.w'),0)
+            CTrans['scale'].setExpression(('Trans_COPY1.scale.h'),1)
             CTrans.knob('skewX').setExpression('Trans_COPY1.skewX')
             CTrans.knob('skewY').setExpression('Trans_COPY1.skewY')
             CTrans.knob('skew_order').setExpression('Trans_COPY1.skew_order')
